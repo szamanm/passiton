@@ -10,7 +10,7 @@ body {
   margin: 5vmin;
   text-align: center;
   font-size: 7vmin;
-  font-weight: 600;
+  font-weight: 800;
   color: white;
   text-transform: uppercase;
 }
@@ -18,6 +18,18 @@ body {
 .logoElement {
   display: inline-block;
   position: relative;
+  transition: font-size cubic-bezier(.4,.9,.45,1.25) 0.35s;
+  animation: appear 1s cubic-bezier(.4,.9,.45,1.25);
+}
+
+@keyframes appear {
+  0% { font-size: 40%; top: 5vmin; }
+  60% { font-size: 120%; top: -1vmin;}
+  100% {top: 0}
+}
+
+.logoElement:hover {
+  font-size: 150% !important;
 }
 .logoElement:before {
   content: attr(copy);
@@ -34,6 +46,7 @@ body {
   transform: rotate(2deg); 
   margin-left: -1vmin;
   font-size: 135%;
+  animation-duration: 1.3s;
 }
 .logoElement.c {
   transform: rotate(2deg); 
@@ -41,6 +54,7 @@ body {
   margin-top: 1vmin;
   font-size: 110%;
   color: #f12929;
+  animation-duration: 1.6s;
 }
 
 ::selection {
