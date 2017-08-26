@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: #d3ff00 center no-repeat;
+  background-image: radial-gradient(circle, #d3ff00, #aed202);
+  font-family: arial;
+}
+
+.logo {
+  margin: 5vmin;
+  text-align: center;
+  font-size: 7vmin;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+}
+
+.logoElement {
+  display: inline-block;
+  position: relative;
+}
+.logoElement:before {
+  content: attr(copy);
+  position: absolute;
+  color: rgba(0,0,0,0.1);
+  z-index: -1;
+  top: -5px;
+  transform: rotate(-2deg); 
+}
+.logoElement.a {
+  transform: rotate(-2deg); 
+}
+.logoElement.b {
+  transform: rotate(2deg); 
+  margin-left: -1vmin;
+  font-size: 135%;
+}
+.logoElement.c {
+  transform: rotate(2deg); 
+  margin-left: -1.2vmin;
+  margin-top: 1vmin;
+  font-size: 110%;
+  color: #f12929;
+}
+
+::selection {
+  background: rgba(0,0,0,0.1);
+}
